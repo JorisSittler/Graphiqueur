@@ -27,8 +27,11 @@ public class Graphiqueur {
 		Course c = new Course(l);
 		System.out.println(c);
 		
-		c.retarderDe(12);
+		c.retarderDe(92);
 		System.out.println(c);
+		
+//		ExportCsv.generateCsvFile("D:\\Users\\Joris\\Documents\\graphiqueur\\pipo.csv", c);
+		ExportCsv.readCsv("D:\\Users\\Joris\\Documents\\graphiqueur\\pipo.csv");
 	}
 
 }

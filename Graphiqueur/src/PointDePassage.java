@@ -13,6 +13,6 @@ public class PointDePassage {
 		heure = heure.retarderDe(m);
 	}
 	public String toString(){
-		return (heure + ", pk :" + pk);
+		return (heure + ", " + pk);
 	}
 }

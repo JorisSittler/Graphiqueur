@@ -7,6 +7,9 @@ public class Course {
 	public Course(List<PointDePassage> liste) {
 		parcours = new ArrayList<PointDePassage>(liste);
 	}
+	public Course(){
+		parcours=null;
+	}
 	public void retarderDe(float m){
 		for (PointDePassage p : parcours){
 			p.retarderDe(m);
