@@ -17,34 +17,6 @@ public class Heure {
 		minute = 0;
 	}
 	
-	public Heure(String s){
-		String cvsSplitBy = ":";
-		try {
-			 
-			br = new BufferedReader(new FileReader(csvFile));
-			while ((s = br.readLine()) != null) {
-	 
-				String[] donnees = line.split(cvsSplitBy);
-	 
-				System.out.println("un= " + donnees[0] 
-	                                 + " , deux=" + donnees[1]);
-			}
-	 
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			if (br != null) {
-				try {
-					br.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-	}
-
 	public Heure plus(Heure a) {
 		int h;
 		float m;
@@ -71,6 +43,13 @@ public class Heure {
 		return (heure + ":" + minute);
 	}
 
+	public float[] toTab(){
+		return new float[]{heure, minute};
+	}
+	public String toCSV(){
+		return ("" + heure + ", " + minute);
+	}
+	
 	public float toNumber() {
 		return (heure + (minute / 60));
 	}

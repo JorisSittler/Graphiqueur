@@ -11,8 +11,9 @@ public class ExportCsv {
 		try {
 			FileWriter writer = new FileWriter(sFileName);
 
+			writer.append("" + c.numero + "\n");
 			for (PointDePassage p : c.parcours) {
-				writer.append(p.toString());
+				writer.append(p.toCSV());
 				writer.append('\n');
 			}
 

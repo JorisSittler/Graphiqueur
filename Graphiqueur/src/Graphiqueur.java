@@ -22,13 +22,13 @@ public class Graphiqueur {
 		PointDePassage o = new PointDePassage(h.retarderDe(15), 24);
 //		System.out.println(o);
 //		
-		List l = new ArrayList();
-		l.add(p); l.add(o);
-		Course c = new Course(l);
-		System.out.println(c);
-		
-		c.retarderDe(92);
-		System.out.println(c);
+//		List l = new ArrayList();
+//		l.add(p); l.add(o);
+//		Course c = new Course(26, l);
+//		System.out.println(c);
+//		
+//		c.retarderDe(92);
+//		System.out.println(c);
 		
 //		ExportCsv.generateCsvFile("D:\\Users\\Joris\\Documents\\graphiqueur\\pipo.csv", c);
 		ExportCsv.readCsv("D:\\Users\\Joris\\Documents\\graphiqueur\\pipo.csv");
