@@ -9,24 +9,26 @@ public class Course {
 		numero = n;
 		parcours = new ArrayList<PointDePassage>(liste);
 	}
-	public Course(int n){
+
+	public Course(int n) {
 		numero = n;
-		parcours=null;
+		parcours = null;
 	}
-	public Course(int n, ArrayList<float[]> liste){
-		numero = n;
-		for (float[] tab : liste){
+
+	public Course(ArrayList<String[]> liste) {
+		numero = 0;
+		parcours = new ArrayList<PointDePassage>();
+		for (String[] tab : liste) {
 			parcours.add(new PointDePassage(tab));
 		}
+		System.out.println(this);
 	}
-	
-	public void retarderDe(float m){
-		for (PointDePassage p : parcours){
+
+	public void retarderDe(float m) {
+		for (PointDePassage p : parcours) {
 			p.retarderDe(m);
 		}
 	}
-	
-	
 
 	public String toString() {
 		String s = "\n" + numero;

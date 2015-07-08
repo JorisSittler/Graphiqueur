@@ -1,4 +1,3 @@
-
 public class PointDePassage {
 	Heure heure;
 	float pk;
@@ -8,9 +7,9 @@ public class PointDePassage {
 		heure = h;
 		pk=k;
 	}
-	public PointDePassage(float[] tab){
-		heure = new Heure((int) tab[0], tab[1]);
-		pk = tab[2];
+	public PointDePassage(String[] tab){
+		heure = new Heure(Integer.parseInt(tab[0]), Float.parseFloat(tab[1]));
+		pk = Float.parseFloat(tab[2]);
 	}
 	
 	public void retarderDe(float m){
